@@ -19,7 +19,7 @@ function convertDirectory(directoryPath, outDirectoryPath) {
 
         //listing all files using forEach
         files.forEach(function (file) {
-            console.log("/n/nReading: " + file);
+            console.log("\nReading: " + file);
             if (file.endsWith(".html")) {
                 fs.readFile(path.join(directoryPath, file), "utf8", function(err, data) {
                     parsedHtml = HTMLParser.parse(data)
